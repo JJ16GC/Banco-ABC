@@ -1,0 +1,65 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace BancoABC
+{
+    public partial class Form2 : Form
+    {
+        public Form2()
+        {
+            InitializeComponent();
+            textNombre2.Text = Session.nombre;
+            textsaldo.Text = Session.saldo;
+            textCuenta.Text = Session.ncuenta;
+
+            this.ActiveControl = textBox1;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form3 f3 = new Form3();
+            f3.Visible = true;
+            this.Visible = false;
+        }
+
+        private void textNombre2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form4 f4 = new Form4();
+            f4.Visible = true;
+            this.Visible = false;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form5 f5 = new Form5();
+            f5.Visible = true;
+            this.Visible = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form6 f6 = new Form6();
+            f6.Visible = true;
+            this.Visible = false;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form f1 = new Form1();
+            f1.Visible = true;
+            this.Visible = false;
+        }
+    }
+}
